@@ -17,7 +17,7 @@ import Image from 'next/image';
 // Store
 import useUserSOLBalanceStore from '../../stores/useUserSOLBalanceStore';
 
-export const HomeView: FC<AppProps> = ({ }) => {
+export const HomeView: FC = ({ }) => {
   const wallet = useWallet();
   const { connection } = useConnection();
 
