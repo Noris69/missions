@@ -1,0 +1,290 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ @import url('https://fonts.cdnfonts.com/css/public-pixel');
+ @font-face {
+  font-family: 'Public Pixel';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Public Pixel'), url('https://fonts.cdnfonts.com/s/71909/PublicPixel-eZPz6.woff') format('woff');
+}
+@font-face {
+  font-family: 'PF Tempesta Five';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PF Tempesta Five'), url('https://fonts.cdnfonts.com/s/7373/pf_tempesta_five.woff') format('woff');
+}  
+@font-face {
+  font-family: 'SF Pixelate';
+  font-style: normal;
+  font-weight: 400;
+  src: local('SF Pixelate'), url('https://fonts.cdnfonts.com/s/7402/SF Pixelate.woff') format('woff');
+}                         
+html,
+body {
+  padding: 0;
+  background-color: #F1F2DA;
+  margin: 0;
+  font-family: 'SF Pixelate', sans-serif !important;}
+.parent-container {
+  width: 100%; /* Set the width of the parent container */
+  height: 500px; /* Set the height of the parent container */
+
+}
+.banner {
+  width: 350%;
+  margin-left: -120%;
+  position: 'absolute';
+  height: 90px; /* Ajustez la hauteur de la bannière selon vos besoins */
+  background-color:#1D9BF0;
+  border: 2px solid black;
+}
+
+.banner1 {
+  width: 90%;
+  left:5%;
+  top:10%;
+  height: 80px; /* Ajustez la hauteur de la bannière selon vos besoins */
+  background-color: #E6F4FE;
+  border: 2px solid black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner1 select {
+  width: 100%;
+  height: 100%;
+  background-color: #E6F4FE; /* Same as the banner1 background color */
+  border: none;
+  color: black; /* Font color */
+  font-size: 20px;
+  font-family: 'SF Pixelate', sans-serif !important;
+}
+
+/* Style des options de la boîte de sélection */
+.select-box option {
+  background-color: white;
+}
+.parent-container2 {
+  width: 100%; /* Set the width of the parent container */
+  height: 500px; /* Set the height of the parent container */
+
+}
+.video {   
+  object-fit: cover;   
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1; 
+}
+.box-container {
+  width: 350%; /* Set the width of the box container to 70% of the parent container's width */
+  height: 100%; /* Set the height of the box container to 30% of the parent container's height */
+  flex-shrink: 0;
+  background-color: #FC8F8A;
+  margin-left: -120%;
+  position: relative;
+  border: 2.5px solid black;
+}
+/* Media query for responsive behavior */
+@media (max-width: 768px) {
+  .parent-container {
+    height: 300px; /* Adjust the height for smaller screens if needed */
+  }
+
+  .box-container {
+    width: 260%; /* Adjust the width for smaller screens if needed */
+    height: 80%; /* Adjust the height for smaller screens if needed */
+    margin-left: -90%; /* Adjust the negative margin for smaller screens if needed */
+  }
+}
+.button-container {
+  width: 50%; /* Adjust the width percentage as needed */
+  height: 10%; /* Adjust the height percentage as needed */
+  flex-shrink: 0;
+margin-top: 3%;}
+
+.button-container a {
+  display: inline-block;
+  border: 2.5px solid black;
+
+  width: 285px;
+  height: 47px;
+  background-color: #91A59A;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 47px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button-container2 {
+  width: 50%; /* Adjust the width percentage as needed */
+  height: 10%; /* Adjust the height percentage as needed */
+  flex-shrink: 0;
+margin-top: 3%;}
+
+.button-container2 a {
+  display: inline-block;
+  border: 2.5px solid black;
+
+  width: 285px;
+  height: 47px;
+  background-color: #91A59A;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 47px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button-container3 {
+  width: 50%; /* Adjust the width percentage as needed */
+  height: 10%; /* Adjust the height percentage as needed */
+  flex-shrink: 0;
+margin-top: 3%;}
+
+.button-container3 a {
+  display: inline-block;
+  border: 2.5px solid black;
+
+  width: 285px;
+  height: 47px;
+  background-color: #1D9BF0;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 47px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button-container4 {
+  width: 50%; /* Adjust the width percentage as needed */
+  height: 10%; /* Adjust the height percentage as needed */
+  flex-shrink: 0;
+margin-top: 3%;}
+
+.button-container4 a {
+  display: inline-block;
+  border: 2.5px solid black;
+
+  width: 285px;
+  height: 47px;
+  background-color: #FAFEFF;
+  color: #4F4F4F;
+  text-decoration: none;
+  text-align: center;
+  line-height: 47px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.button-container1 {
+  width: 50%; /* Adjust the width percentage as needed */
+  height: 10%; /* Adjust the height percentage as needed */
+  flex-shrink: 0;
+margin-top: 3%;}
+.progress-bar {
+  width: 60%;
+  height: 50px;
+  background-color: #B7D2CA;
+  border: 2px solid black;
+}
+
+.progress {
+  height: 100%;
+  width: 70%; /* Modifier cette valeur pour ajuster la partie chargée */
+  background-color: #98BC8F;
+  border-radius: 5px;
+}
+
+.remaining {
+  height: 100%;
+  width: 0%; /* Modifier cette valeur pour ajuster la partie non chargée */
+  background-color: #B7D2CA;
+}
+
+.button-container1 a {
+  display: inline-block;
+  border: 2.5px solid black;
+
+  width: 285px;
+  height: 47px;
+  background-color: #30565A;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 47px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.text-container {
+  left: 8%;
+  top: 5%; /* Adjust the value to position it lower on the page */
+  overflow: hidden;
+  position: relative;
+
+}
+.text-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5%;
+}
+.number {
+  color: #00303B;
+  font-size: 35px;
+  font-family: 'SF Pixelate', sans-serif !important;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin: 0;
+  margin-right: 25px;
+}
+.side-div {
+  width: 0px;
+  bottom:63.5%;
+  left: 35%;
+  height: 252px;
+  flex-shrink: 0;
+  border: 2px solid black;
+  position : relative;
+}
+
+.text-right {
+  color: #00303B;
+  font-size: 34px;
+  font-family: 'SF Pixelate', sans-serif !important;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin:0;
+}
+.text {
+  color: #00303B;
+  font-size: 11px;
+  font-family: 'SF Pixelate', sans-serif !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 10px 0;
+}
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* example: override wallet button style */
+.wallet-adapter-button:not([disabled]):hover {
+  background-color: #707070;
+}
+
