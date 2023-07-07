@@ -31,14 +31,14 @@ export const AppBar: React.FC = () => {
         {/* Wallet & Settings */}
         <div className="navbar-end">
           <div className="hidden md:inline-flex align-items-center justify-items gap-8">
-            <div style={{position:'relative', right:'88%', marginBottom:'0%', color:"F4DFCA"}}>
+            <div style={{position:'relative', right:'90%', marginBottom:'0%', color:"#3F635B",}}>
             <NavElement
             label="Home"
             href="/"
             navigationStarts={() => setIsNavOpen(false)}
           />
             </div>
-            <div style={{position:'relative', right:'86%', marginBottom:"3%"}}>
+            <div style={{position:'relative', right:'86%', marginBottom:"3%", color:"#3F635B"}}>
 
           <NavElement
             label="Missions"
