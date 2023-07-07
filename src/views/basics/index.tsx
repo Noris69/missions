@@ -5,6 +5,8 @@ import { SendTransaction } from '../../components/SendTransaction';
 import { SendVersionedTransaction } from '../../components/SendVersionedTransaction';
 import Link from 'next/link';
 import { useState } from 'react';
+import { AppBar } from '../../components/AppBar';
+import { AppProps } from 'next/app';
 
 export const BasicsView: FC = ({ }) => {
   const [selectedOption, setSelectedOption] = useState('');
@@ -13,7 +15,15 @@ export const BasicsView: FC = ({ }) => {
     setSelectedOption(event.target.value);
   };
   return (
-    <div className="md:hero mx-auto p-4" style={{ marginLeft: '0%', backgroundImage:"url(missionsbackground.png)", backgroundColor:"#F1F2DA", backgroundSize:"cover" }}>
+   
+    <>
+    <div>
+    <AppBar />
+
+    </div>
+   
+  <div className="md:hero mx-auto p-4" style={{ marginLeft: '0%', backgroundImage:"url(missionsbackground.png)", backgroundColor:"#F1F2DA", backgroundSize:"cover" }}>
+     
       <div className="md:hero-content flex flex-col" >
         <h1 className="text-center text-5xl font-bold text-[#00303B] text-transparent bg-clip-text bg-gradient-to-br from-indigo-500 to-fuchsia-500 mt-10 mb-8" style={{ left: '10%', position:'relative', textShadow:'5px 5px 1px red', fontSize:"60px", fontWeight:"700" }}>
 MY STATS        </h1>
@@ -254,6 +264,7 @@ DIVERSE MISSIONS</h1>
 </div> 
       </div>
     </div>
-    
+    </>
+ 
   );
 };

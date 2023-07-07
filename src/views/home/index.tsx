@@ -3,6 +3,8 @@ import { FC, useEffect, useState } from 'react';
 import Link from 'next/link';
 import LogoImage from '/logo.png';
 import VideoPlayer from "react-background-video-player";
+import { AppBar } from '../../components/AppBar';
+import { AppProps } from 'next/app';
 
 // Wallet
 import { useWallet, useConnection } from '@solana/wallet-adapter-react';
@@ -15,7 +17,7 @@ import Image from 'next/image';
 // Store
 import useUserSOLBalanceStore from '../../stores/useUserSOLBalanceStore';
 
-export const HomeView: FC = ({ }) => {
+export const HomeView: FC<AppProps> = ({ }) => {
   const wallet = useWallet();
   const { connection } = useConnection();
 
@@ -41,16 +43,8 @@ export const HomeView: FC = ({ }) => {
     }, 0.5 * 60 * 1000); // Set cooldown to 30 minutes
 
   };
-  useEffect(() => {
-    const hasViewedVideo = localStorage.getItem('videoViewed');
-    if (hasViewedVideo) {
-      setVideoEnded(true);
-      setCanPlayVideo(false);
-      setTimeout(() => {
-        setCanPlayVideo(true);
-      }, 30 * 60 * 1000); // Set cooldown to 30 minutes
-    }
-  }, []);
+  
+
   useEffect(() => {
     const calculateVideoHeight = () => {
       const videoWidth = window.innerWidth;
@@ -70,26 +64,30 @@ export const HomeView: FC = ({ }) => {
   return (
 
     <div >
-            <img src="/back2.jpg" alt="Long image" style={{ height: "auto", width: "100%", objectFit: "contain", marginLeft:'0%' }} />
-
-      <div className="md:hero-content flex flex-col" style={{ minHeight: "0vh", marginLeft: "20%" }}>
-      
-      {!videoEnded ? (
+{!videoEnded ? (
         <VideoPlayer
           src="page2background.mp4"
           width="100%"
           height="100%"
-          top="0"
-          bot="0"
-          z-index="-1"
-          position="fixed"
+          
+          backgroundSize="cover"
+          position="relative"
           loop={false}
           pauseOnScroll
           muted
           onEnd={handleVideoEnd}
           autoPlay
         />
-      ) : null}
+      ) : (   
+<div>
+<AppBar/>
+<img src="/back2.jpg" alt="Long image" style={{ height: "auto", width: "100%", objectFit: "contain", marginLeft:'0%' }} />
+
+</div>
+      )}
+      <div className="md:hero-content flex flex-col" style={{ minHeight: "0vh", marginLeft: "20%" }}>
+      
+
 
         <div className='mt-6' >
 
