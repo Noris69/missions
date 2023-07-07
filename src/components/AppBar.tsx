@@ -19,7 +19,7 @@ export const AppBar: React.FC = () => {
   return (
     <div style={{ backgroundSize:"cover", backgroundImage:"url(backgrounds.jpg)", backgroundColor:"#F1F2DA", width:"100%", height:"100%" }}>
       {/* NavBar / Header */}
-      <div className="navbar flex h-20 flex-row min-h-[9.5rem]  " style={{position:"relative", right:'6.1%'}} >
+      <div className="navbar flex h-20 flex-row min-h-[7.5rem]  " style={{position:"relative", right:'5.1%'}} >
         <div className="navbar-start align-items-center">
           <div className="hidden sm:inline w-22 h-22 md:p-2 ml-10">
             
@@ -31,17 +31,17 @@ export const AppBar: React.FC = () => {
         {/* Wallet & Settings */}
         <div className="navbar-end">
           <div className="hidden md:inline-flex align-items-center justify-items gap-8">
-            <div style={{position:'relative', right:'152%'}}>
+            <div style={{position:'relative', right:'86%'}}>
             <NavElement
             label="Home"
             href="/"
             navigationStarts={() => setIsNavOpen(false)}
           />
             </div>
-            <div style={{position:'relative', right:'138%'}}>
+            <div style={{position:'relative', right:'85%'}}>
 
           <NavElement
-            label="Basics"
+            label="Missions"
             query={{ yourQueryParameter: imagePath}}
             href="/basics"
             
