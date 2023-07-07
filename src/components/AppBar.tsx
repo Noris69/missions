@@ -31,14 +31,14 @@ export const AppBar: React.FC = () => {
         {/* Wallet & Settings */}
         <div className="navbar-end">
           <div className="hidden md:inline-flex align-items-center justify-items gap-8">
-            <div style={{position:'relative', right:'86%'}}>
+            <div style={{position:'relative', right:'88%', marginBottom:'0%', color:"F4DFCA"}}>
             <NavElement
             label="Home"
             href="/"
             navigationStarts={() => setIsNavOpen(false)}
           />
             </div>
-            <div style={{position:'relative', right:'85%'}}>
+            <div style={{position:'relative', right:'86%', marginBottom:"3%"}}>
 
           <NavElement
             label="Missions"
@@ -48,7 +48,7 @@ export const AppBar: React.FC = () => {
             navigationStarts={() => setIsNavOpen(false)}
           />
           </div>
-          <WalletMultiButtonDynamic className="btn-ghost btn-sm rounded-btn text-lg mr-6 " />
+          <WalletMultiButtonDynamic className="btn-ghost btn-sm rounded-btn text-lg mr-4 " />
         </div>
           <label
               htmlFor="my-drawer"
