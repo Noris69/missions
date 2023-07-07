@@ -43,7 +43,16 @@ export const HomeView: FC = ({ }) => {
     }, 0.5 * 60 * 1000); // Set cooldown to 30 minutes
 
   };
-  
+  useEffect(() => {
+    const hasViewedVideo = localStorage.getItem('videoViewed');
+    if (hasViewedVideo) {
+      setVideoEnded(true);
+      setCanPlayVideo(false);
+      setTimeout(() => {
+        setCanPlayVideo(true);
+      }, 30 * 60 * 1000); // Set cooldown to 30 minutes
+    }
+  }, []);
 
   useEffect(() => {
     const calculateVideoHeight = () => {
