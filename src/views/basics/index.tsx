@@ -10,9 +10,32 @@ import { AppProps } from 'next/app';
 
 export const BasicsView: FC = ({ }) => {
   const [selectedOption, setSelectedOption] = useState('');
+  const [className, setClassName] = useState('button-container2');
+  const [className1, setClassName1] = useState('button-container2');
+
+  const [text, setText] = useState('Connect Discord');
+  const [text1, setText1] = useState('Connect Twitter');
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
+  };
+  const handleClick1 = () => {
+    if (className === 'button-container2') {
+      setClassName1('button-container4');
+      setText1('Twitter ID');
+    } else {
+      setClassName1('button-container2');
+      setText1('Connect Twitter');
+    }
+  }
+  const handleClick = () => {
+    if (className === 'button-container2') {
+      setClassName('button-container4');
+      setText('Discord ID');
+    } else {
+      setClassName('button-container2');
+      setText('Connect Discord');
+    }
   };
   return (
    
@@ -25,10 +48,17 @@ export const BasicsView: FC = ({ }) => {
   <div className="md:hero mx-auto p-4" style={{ marginLeft: '0%', backgroundImage:"url(missionsbackground.png)", backgroundColor:"#F1F2DA", backgroundSize:"cover" }}>
      
       <div className="md:hero-content flex flex-col" >
+      
         <h1 className="text-center text-5xl font-bold text-[#00303B] text-transparent bg-clip-text bg-gradient-to-br from-indigo-500 to-fuchsia-500 mt-10 mb-8" style={{ left: '10%', position:'relative', textShadow:'5px 5px 1px red', fontSize:"60px", fontWeight:"700" }}>
 MY STATS        </h1>
+c<div className={className} style = {{position:"relative", left:'110%', marginTop:"-34%"}}>
+  <Link href="" onClick={handleClick}><p style={{fontWeight:'700'}}>{text}</p></Link>
+</div>
+<div className={className1} style = {{position:"relative", right:'110%', marginTop:'-17%'}}>
+  <Link href="" onClick={handleClick1}><p style={{fontWeight:'700'}}>{text1}</p></Link>
+</div>
         {/* CONTENT GOES HERE */}
-        <div className="parent-container">
+        <div className="parent-container" style={{marginTop:"10%"}}>
   <div className="box-container" style={{boxShadow: "10px 10px 1px black"}}>
     <div className="text-container">
       <div className="text-item">
