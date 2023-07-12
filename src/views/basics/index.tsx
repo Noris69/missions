@@ -1,21 +1,111 @@
 
-import { FC } from "react";
-import { SignMessage } from '../../components/SignMessage';
+import { getSession } from "next-auth/react";
+import { AppProps } from 'next/app';
+import Link from 'next/link';
+import { FC, useEffect, useState } from "react";
+import { AppBar } from '../../components/AppBar';
 import { SendTransaction } from '../../components/SendTransaction';
 import { SendVersionedTransaction } from '../../components/SendVersionedTransaction';
-import Link from 'next/link';
-import { useState } from 'react';
-import { AppBar } from '../../components/AppBar';
-import { AppProps } from 'next/app';
+import { SignMessage } from '../../components/SignMessage';
+import instr_twitter from "../../lib/TwitterInstraction";
 
 export const BasicsView: FC = ({ }) => {
   const [selectedOption, setSelectedOption] = useState('');
+  const [is_follow, setIsFollow] = useState(false);
+  const [is_like, setIsLike] = useState(false);
+  const [is_retweet, setIsRetweet] = useState(false);
 
-  const handleOptionChange = (event) => {
+  const [loading, setLoanding] = useState(false);
+  const [twitter_session, setTwitterSession] = useState<any>();
+
+  // this state is if you already claim or not
+  const [is_claim, setIsClaim] = useState(true);
+
+  useEffect(() => {
+    get_session()
+
+  }, [])
+
+  async function get_session() {
+    const session = await getSession()
+    setTwitterSession(session);
+  }
+
+
+  const handleOptionChange = (event: any) => {
     setSelectedOption(event.target.value);
   };
+
+  const follow = async () => {
+    if (loading) {
+      return
+    }
+    setLoanding(true);
+    if (is_claim) {
+      return;
+    }
+    if (!twitter_session) {
+      return // notify_warning("connect twitter first!");
+    }
+    try {
+      await instr_twitter("post", "follow");
+      
+      setIsFollow(true);
+    } catch (e) {
+      console.log(e);
+      throw e;
+    } finally {
+      setLoanding(false);
+    }
+  }
+  const retweet = async () => {
+    if (loading) {
+      return
+    }
+    setLoanding(true);
+    if (is_claim) {
+      return;
+    }
+    if (!twitter_session) {
+      return // notify_warning("connect twitter first!");
+    }
+    try {
+      await instr_twitter("search", "retweet");
+      
+      setIsRetweet(true);
+    } catch (e) {
+      console.log(e);
+      throw e;
+    } finally {
+      setLoanding(false);
+    }
+  }
+  const like = async () => {
+    if (loading) {
+      return
+    }
+    setLoanding(true);
+    if (is_claim) {
+      return;
+    }
+    if (!twitter_session) {
+      return // notify_warning("connect twitter first!");
+    }
+
+    try {
+      await instr_twitter("search", "like");
+
+      setIsLike(true);
+    } catch (e) {
+      console.log(e);
+      throw e;
+    } finally {
+      setLoanding(false);
+    }
+  }
+  
   return (
-   
+
     <>
     <div>
     <AppBar />
@@ -23,7 +113,6 @@ export const BasicsView: FC = ({ }) => {
     </div>
    
   <div className="md:hero mx-auto p-4" style={{ marginLeft: '0%', backgroundImage:"url(missionsbackground.png)", backgroundColor:"#F1F2DA", backgroundSize:"cover" }}>
-     
       <div className="md:hero-content flex flex-col" >
         <h1 className="text-center text-5xl font-bold text-[#00303B] text-transparent bg-clip-text bg-gradient-to-br from-indigo-500 to-fuchsia-500 mt-10 mb-8" style={{ left: '10%', position:'relative', textShadow:'5px 5px 1px red', fontSize:"60px", fontWeight:"700" }}>
 MY STATS        </h1>
