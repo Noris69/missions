@@ -21,6 +21,8 @@
     "@tailwindcss/typography": "^0.5.9",
     "daisyui": "^1.24.3",
     "date-fns": "^2.29.3",
+    "framer-motion": "^10.12.21",
+    "gsap": "^3.12.2",
     "immer": "^9.0.12",
     "next": "^13.1.5",
     "next-auth": "^3.27.3",
@@ -30,6 +32,11 @@
     "react-background-video-player": "^1.1.8",
     "react-dom": "^18.2.0",
     "twitter-api-v2": "^1.15.0",
+    "react-player": "^2.12.0",
+    "react-scrollama": "^2.3.2",
+    "react-video-scroll": "^1.0.1",
+    "scrollmagic": "^2.0.8",
+    "skrollr": "^0.6.26",
     "zustand": "^3.6.9"
   },
   "devDependencies": {

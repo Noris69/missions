@@ -16,28 +16,46 @@ export const AppBar: React.FC = () => {
   const imagePath = "missionsbackground.png"; // Define the image path
 
   return (
-    <div style={{ backgroundSize:"cover", backgroundImage:"url(backgrounds.jpg)", backgroundColor:"#F1F2DA", width:"100%", height:"100%" }}>
+    <div style={{ backgroundSize:"cover",  backgroundImage:"url(backgrounds.jpg)", backgroundColor:"#F1F2DA", width:"100%", height:"100%" }}>
       {/* NavBar / Header */}
       <div className="navbar flex h-20 flex-row min-h-[7.5rem]  " style={{position:"relative", right:'5.1%'}} >
         <div className="navbar-start align-items-center">
           <div className="sm:inline w-22 h-22 md:p-2 ml-10">
             
           </div>
+          <div className="wallet-button-container">
+
           <WalletMultiButtonDynamic className="btn-ghost btn-sm relative flex md:hidden text-lg " />
+        </div>
         </div>
 
         {/* Nav Links */}
         {/* Wallet & Settings */}
         <div className="navbar-end">
-          <div className="hidden md:inline-flex align-items-center justify-items gap-8">
-            <div style={{position:'relative', right:'90%', marginBottom:'0%', color:"#3F635B",}}>
+          <div className="hidden md:inline-flex align-items-center justify-items gap-8" >
+          <div style={{position:'relative', right:'14%', marginBottom:'0%', color:"#3F635B",}}>
+            <NavElement
+            label="Fraction Nft"
+            href="/fraction-nfts"
+            navigationStarts={() => setIsNavOpen(false)}
+          />
+                      </div>
+
+          <div style={{position:'relative', right:'101%', marginBottom:'0%', color:"#3F635B",}}>
+            <NavElement
+            label="About"
+            href="/about-pixsells"
+            navigationStarts={() => setIsNavOpen(false)}
+          />
+            </div>
+            <div style={{position:'relative', right:'93%', marginBottom:'0%', color:"#3F635B",}}>
             <NavElement
             label="Home"
             href="/"
             navigationStarts={() => setIsNavOpen(false)}
           />
             </div>
-            <div style={{position:'relative', right:'86%', marginBottom:"3%", color:"#3F635B"}}>
+            <div style={{position:'relative', right:'87%', marginBottom:"3%", color:"#3F635B"}}>
 
           <NavElement
             label="Missions"
@@ -47,7 +65,8 @@ export const AppBar: React.FC = () => {
             navigationStarts={() => setIsNavOpen(false)}
           />
           </div>
-          <WalletMultiButtonDynamic className="btn-ghost btn-sm rounded-btn text-lg mr-4 " />
+          <WalletMultiButtonDynamic className="btn-ghost btn-sm rounded-btn text-lg mr-4 custom-button  "         style={{ fontFamily: 'ThaleahFat', fontSize:"18px" }}
+ />
         </div>
           <label
               htmlFor="my-drawer"

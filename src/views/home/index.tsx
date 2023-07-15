@@ -36,7 +36,7 @@ export const HomeView: FC = ({ }) => {
 
   const handleVideoEnd = () => {
     setVideoEnded(true);
-    localStorage.setItem('videoViewed', 'true'); // Store the flag in localStorage
+   localStorage.setItem('videoViewed', 'true'); // Store the flag in localStorage
     setCanPlayVideo(false);
     setTimeout(() => {
       setCanPlayVideo(true);
@@ -80,7 +80,7 @@ export const HomeView: FC = ({ }) => {
           height="100%"
           
           backgroundSize="cover"
-          position="relative"
+          position="fixed"
           loop={false}
           pauseOnScroll
           muted

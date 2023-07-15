@@ -16,15 +16,9 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
             <title>PISXELLS MISSIONS</title>
           </Head>
 
-          <ContextProvider>
-            <div className="flex flex-col h-screen">
-              <Notifications />
 
                 <Component {...pageProps} />
-                <Footer/>
               
-            </div>
-          </ContextProvider>
         </>
     );
 };
