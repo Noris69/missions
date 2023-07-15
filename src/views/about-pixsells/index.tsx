@@ -49,7 +49,7 @@ export const AboutPixsellsViews: FC = () => {
           video.pause();
           isVideoPlaying = true;
         }
-        video.currentTime -= 0.02; // Adjust the backward playback speed as needed
+        video.currentTime -= 0.1; // Adjust the backward playback speed as needed
     
         if (video.currentTime <= 0) {
           // Reached the beginning of the video
