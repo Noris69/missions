@@ -1,5 +1,5 @@
 
-import { getSession } from "next-auth/react";
+import { getSession } from "next-auth/client";
 import { AppProps } from 'next/app';
 import Link from 'next/link';
 import { FC, useEffect, useState } from "react";

@@ -1,10 +1,9 @@
-import { FC } from 'react';
-import Link from "next/link";
 import dynamic from 'next/dynamic';
-import React, { useState } from "react";
+import Link from "next/link";
+import React, { FC, useState } from "react";
 import { useAutoConnect } from '../contexts/AutoConnectProvider';
-import NetworkSwitcher from './NetworkSwitcher';
 import NavElement from './nav-element';
+import NetworkSwitcher from './NetworkSwitcher';
 
 const WalletMultiButtonDynamic = dynamic(
   async () => (await import('@solana/wallet-adapter-react-ui')).WalletMultiButton,
@@ -21,7 +20,7 @@ export const AppBar: React.FC = () => {
       {/* NavBar / Header */}
       <div className="navbar flex h-20 flex-row min-h-[7.5rem]  " style={{position:"relative", right:'5.1%'}} >
         <div className="navbar-start align-items-center">
-          <div className="hidden sm:inline w-22 h-22 md:p-2 ml-10">
+          <div className="sm:inline w-22 h-22 md:p-2 ml-10">
             
           </div>
           <WalletMultiButtonDynamic className="btn-ghost btn-sm relative flex md:hidden text-lg " />
