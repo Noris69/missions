@@ -135,13 +135,13 @@ TWITTER MISSIONS       </h1>
 <p style={{position:"relative", left:"28%", top:"31%", color:'#C33019', fontWeight:"700",fontSize:"17px"}}>NON COMPLETED</p>
 <p style={{position:"relative", left:"30%", top:"34%", color:'#C33019', fontWeight:"700",fontSize:"17px"}}>NON VERIFIED</p>
 
-<div className="button-container3" style={{position:"relative", marginTop:"52%", left:"5%", backgroundColor:"#E6F4FE", color:"#ffffff"}}>
+<div className="button-container3" style={{position:"relative", marginTop:"68%", left:"5%", backgroundColor:"#E6F4FE", color:"#ffffff"}}>
   <Link href="/"><p style={{fontSize:"13px"}}>FOLLOW</p></Link>
 </div>
 
 </div>
 <div className="banner" style={{ width:"25%", height:"10%", position:"relative", left:"158%", bottom:"45.5%", color:"#ffffff"}}>
-<p style={{position:"relative", left:"30%", top:"30%", fontSize:"20px"}}>Retweet</p>
+<p style={{position:"relative", left:"38%", top:"30%", fontSize:"20px"}}>Retweet</p>
 
 </div>
 <div className="box-container" style ={{backgroundColor:'#E6F4FE',bottom:"45.5%", border:'1px solid black', width:'25%', height:'50%', left:"158%"}}>
@@ -150,7 +150,7 @@ TWITTER MISSIONS       </h1>
 <p style={{position:"relative", left:"35%", top:"22%", color:'#00303B', fontSize:"30px", fontWeight:"700"}}>40 PTS</p>
 <p style={{position:"relative", left:"34%", top:"33%", color:'#118B1D', fontWeight:"700",fontSize:"18px"}}>COMPLETED</p>
 <p style={{position:"relative", left:"33%", top:"36%", color:'#C33019', fontWeight:"700",fontSize:"18px"}}>NON VERIFIED</p>
-<div className="button-container3" style={{position:"relative", marginTop:"52%", left:"5%", backgroundColor:"#E6F4FE", color:"#ffffff"}}>
+<div className="button-container3" style={{position:"relative", marginTop:"68%", left:"5%", backgroundColor:"#E6F4FE", color:"#ffffff"}}>
   <Link href="/"><p style={{fontSize:"12px"}}>COMPLETE THE MISSION</p></Link>
 </div>
 </div>
@@ -164,7 +164,7 @@ TWITTER MISSIONS       </h1>
 <p style={{position:"relative", left:"37%", top:"22%", color:'#00303B', fontSize:"30px", fontWeight:"700"}}>35 PTS</p>
 <p style={{position:"relative", left:"35%", top:"33%", color:'#118B1D', fontWeight:"700",fontSize:"18px"}}> COMPLETED</p>
 <p style={{position:"relative", left:"38%", top:"36%", color:'#118B1D', fontWeight:"700",fontSize:"18px"}}> VERIFIED</p>
-<div className="button-container3" style={{position:"relative" ,marginTop:"52%", left:"5%", backgroundColor:"#E6F4FE", color:"#ffffff"}}>
+<div className="button-container3" style={{position:"relative" ,marginTop:"68%", left:"5%", backgroundColor:"#E6F4FE", color:"#ffffff"}}>
   <Link href="/"><p style={{fontSize:"12px"}}>COMPLETE THE MISSION</p></Link>
 </div>
 </div>
@@ -202,7 +202,7 @@ DISCORD MISSIONS       </h1>
 
 </div>
 <div className="banner" style={{ width:"25%", height:"10%", position:"relative", left:"158%", bottom:"45.5%", color:"#ffffff",backgroundColor:"#7258F2"}}>
-<p style={{position:"relative", left:"30%", top:"30%", fontSize:"22px"}}>Retweet</p>
+<p style={{position:"relative", left:"38%", top:"30%", fontSize:"22px"}}>Retweet</p>
 
 </div>
 <div className="box-container" style ={{backgroundColor:'#E6F4FE',bottom:"45.5%", border:'1px solid black', width:'25%', height:'50%', left:"158%"}}>
@@ -263,7 +263,7 @@ DIVERSE MISSIONS</h1>
 
 </div>
 <div className="banner" style={{ width:"25%", height:"10%", position:"relative", left:"158%", bottom:"45.5%", color:"#ffffff",backgroundColor:"#F25858"}}>
-<p style={{position:"relative", left:"30%", top:"30%", fontSize:"22px"}}>Retweet</p>
+<p style={{position:"relative", left:"38%", top:"30%", fontSize:"22px"}}>Retweet</p>
 
 </div>
 <div className="box-container" style ={{backgroundColor:'#FFF0F0',bottom:"45.5%", border:'1px solid black', width:'25%', height:'50%', left:"158%"}}>
