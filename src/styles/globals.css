@@ -9,6 +9,12 @@
   src: local('Public Pixel'), url('https://fonts.cdnfonts.com/s/71909/PublicPixel-eZPz6.woff') format('woff');
 }
 @font-face {
+  font-family: 'ThaleahFat';
+  src: url('./ThaleahFat.ttf') format('truetype');
+  /* Add other font properties if needed (e.g., font-weight, font-style) */
+}
+
+@font-face {
   font-family: 'PF Tempesta Five';
   font-style: normal;
   font-weight: 400;
@@ -25,12 +31,18 @@ body {
   padding: 0;
   background-color: #F1F2DA;
   margin: 0;
-  font-family: 'SF Pixelate', sans-serif !important;}
+  font-family: 'ThaleahFat', sans-serif !important;}
 .parent-container {
   width: 100%; /* Set the width of the parent container */
   height: 500px; /* Set the height of the parent container */
 
 }
+/* CSS file */
+.custom-button .wallet-button-label {
+  font-family: 'ThaleahFat', sans-serif !important;
+  /* Ajoutez d'autres propriétés de style au besoin */
+}
+
 
 .banner {
   width: 350%;

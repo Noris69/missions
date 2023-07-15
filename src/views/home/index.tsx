@@ -36,8 +36,8 @@ export const HomeView: FC = ({ }) => {
 
   const handleVideoEnd = () => {
     setVideoEnded(true);
-    localStorage.setItem('videoViewed', 'true'); // Store the flag in localStorage
-    setCanPlayVideo(false);
+   // localStorage.setItem('videoViewed', 'true'); // Store the flag in localStorage
+    //setCanPlayVideo(false);
     setTimeout(() => {
       setCanPlayVideo(true);
     }, 0.5 * 60 * 1000); // Set cooldown to 30 minutes
@@ -47,7 +47,7 @@ export const HomeView: FC = ({ }) => {
     const hasViewedVideo = localStorage.getItem('videoViewed');
     if (hasViewedVideo) {
       setVideoEnded(true);
-      setCanPlayVideo(false);
+      //setCanPlayVideo(false);
       setTimeout(() => {
         setCanPlayVideo(true);
       }, 30 * 60 * 1000); // Set cooldown to 30 minutes
@@ -80,7 +80,7 @@ export const HomeView: FC = ({ }) => {
           height="100%"
           
           backgroundSize="cover"
-          position="relative"
+          position="fixed"
           loop={false}
           pauseOnScroll
           muted
