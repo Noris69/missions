@@ -80,7 +80,7 @@ export const HomeView: FC = ({ }) => {
           height="100%"
           
           backgroundSize="cover"
-          position="fixed"
+          position="relative"
           loop={false}
           pauseOnScroll
           muted
