@@ -1,0 +1,174 @@
+{
+  "version": "0.1.0",
+  "name": "pixsells",
+  "instructions": [
+    {
+      "name": "initCounter",
+      "accounts": [
+        {
+          "name": "counter",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "point",
+      "accounts": [
+        {
+          "name": "tracker",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "escrow",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "escrowAta",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userAta",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "mint",
+          "isMut": true,
+          "isSigner": false,
+          "docs": [
+            "CHECK = safe"
+          ]
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "instruction",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Tracker",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "publicKey"
+          },
+          {
+            "name": "follow",
+            "type": "bool"
+          },
+          {
+            "name": "retweet",
+            "type": "bool"
+          },
+          {
+            "name": "like",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PointTracker",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "publicKey"
+          },
+          {
+            "name": "points",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ],
+  "types": [
+    {
+      "name": "PixsellsError",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "InvalidNftCollection"
+          },
+          {
+            "name": "MissingNft"
+          },
+          {
+            "name": "PublicKeyMismatch"
+          },
+          {
+            "name": "AlreadyApproved"
+          },
+          {
+            "name": "AccountNotFound"
+          },
+          {
+            "name": "RemainingAccountNotFound"
+          },
+          {
+            "name": "MissionAlreadyDone"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "Uninitialized",
+      "msg": "account is not initialize"
+    },
+    {
+      "code": 6001,
+      "name": "IncorrectOwner",
+      "msg": "not the right owner"
+    },
+    {
+      "code": 6002,
+      "name": "PublicKeyMismatch",
+      "msg": "Public key mismatch"
+    }
+  ],
+  "metadata": {
+    "address": "3F7mRLdLTt2C31e8rmbN4EL6EyzcMQtruL4aNXwQCTMg"
+  }
+}

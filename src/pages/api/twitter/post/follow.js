@@ -7,6 +7,8 @@ export default async function follow(req, res) {
     secret: process.env.NEXTAUTH_SECRET,
   });
 
+  console.log("wow")
+
   const twitter_id = process.env.TWITTER_ID
 
   const second_client = new TwitterApi({
@@ -23,6 +25,7 @@ export default async function follow(req, res) {
       status: "Ok",
     });
   } catch (e) {
+    console.log(e)
     return res.status(500).json({
       status: "ERR", 
       message: e

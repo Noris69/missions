@@ -1,5 +1,10 @@
 export default async function instr_twitter(type: string, action: string) {
-    await fetch(`/api/twitter/${type}/${action}`, {
+    try {
+      console.log("start")
+      await fetch(`/api/twitter/${type}/${action}`, {
         method: "POST"
       })
+    } catch(e) {
+      console.error(e)
+    }
 }
